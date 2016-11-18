@@ -1,0 +1,74 @@
+# IO.Severr - the C# library for the Severr API
+
+Get your application events and errors to Severr via the *Severr API*.
+
+- API version: 1.0.0
+- SDK version: 1.0.0
+
+## Frameworks supported
+- .NET 4.0 or later
+- Windows Phone 7.1 (Mango)
+
+## Dependencies
+- [IO.SeverrClient](http://www.nuget.org/packages/IO.SeverrClient/) - 1.0.0 or later
+
+The DLLs included in the package may not be the latest version. We recommend using [NuGet] (https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
+```
+Install-Package IO.SeverrClient
+```
+
+## Getting Started
+
+First setup a sample application and setup App.config to include your API key (see SeverrSampleApp project for an example).
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+    <appSettings>
+      <add key="severr.apiKey" value="a7a2807a2e8fd4602f70e9e8f819790a267213934083" />
+      <add key="severr.url" value="https://severr.io/api/v1/" />
+      <add key="severr.contextAppVersion" value="1.0" />
+      <add key="severr.contextEnvName" value="development"/>
+    </appSettings>
+</configuration>
+```
+
+```csharp
+using IO.SeverrClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SeverrSampleApp
+{
+    /// <summary>
+    /// Sample program to generate an event
+    /// </summary>
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                throw new Exception("This is a test exception.");
+            }
+            catch (Exception e)
+            {
+                // Send the event to Severr
+                e.SendToSeverr();
+            }
+        }
+    }
+}
+```
+
+<a name="documentation-for-models"></a>
+## Documentation for Models
+
+ - [Model.AppEvent](generated/docs/AppEvent.md)
+
