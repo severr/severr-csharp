@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeverrClientIntegrationTest
+namespace SeverrSampleApp
 {
     /// <summary>
     /// Sample program to generate an event

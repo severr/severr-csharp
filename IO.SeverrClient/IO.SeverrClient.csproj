@@ -48,12 +48,6 @@
     <Compile Include="SeverrClient.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\IO.Severr\IO.Severr.csproj">
-      <Project>{ac7618be-72dc-4015-b2fb-4703f9745f9f}</Project>
-      <Name>IO.Severr</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
     <None Include="_CreateNewNuGetPackage\Config.ps1" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\CreateNuGetPackage.ps1" />
@@ -63,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="_CreateNewNuGetPackage\DoNotModify\NuGet.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\generated\src\IO.Severr\IO.Severr.csproj">
+      <Project>{ac7618be-72dc-4015-b2fb-4703f9745f9f}</Project>
+      <Name>IO.Severr</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
