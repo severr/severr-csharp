@@ -6,7 +6,6 @@
 *.suo
 *.user
 *.sln.docstates
-IO.Severr.sln
 
 # Build results
 
@@ -16,7 +15,6 @@ x64/
 build/
 [Bb]in/
 [Oo]bj/
-IO.SeverrClient/New-NuGetPackages
 
 # NuGet Packages
 *.nupkg
@@ -185,5 +183,3 @@ $RECYCLE.BIN/
 
 # Visual Studio 2014 CTP
 **/*.sln.ide
-
-
