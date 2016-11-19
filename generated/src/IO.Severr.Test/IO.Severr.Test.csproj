@@ -86,7 +86,7 @@ limitations under the License.
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\IO.Severr\IO.Severr.csproj">
-          <Project>{AB27A637-E206-4126-B275-C9DBE0504AA3}</Project>
+          <Project>{BB542020-52A0-4488-862D-9232D4777DF4}</Project>
           <Name>IO.Severr</Name>
       </ProjectReference>
   </ItemGroup>
