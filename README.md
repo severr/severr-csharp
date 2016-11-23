@@ -22,15 +22,15 @@ Install-Package IO.SeverrClient
 First setup a sample application and setup App.config to include your API key (see SeverrSampleApp project for an example).
 
 ```xml
-&lt;configuration>
+<configuration>
 ...
-    &lt;appSettings>
-      &lt;add key="severr.apiKey" value="a7a2807a2e8fd4602f70e9e8f819790a267213934083" />
-      &lt;add key="severr.url" value="https://severr.io/api/v1/" />
-      &lt;add key="severr.contextAppVersion" value="1.0" />
-      &lt;add key="severr.contextEnvName" value="development"/>
-    &lt;/appSettings>
-&lt;/configuration>
+    <appSettings>
+      <add key="severr.apiKey" value="a7a2807a2e8fd4602f70e9e8f819790a267213934083" />
+      <add key="severr.url" value="https://severr.io/api/v1/" />
+      <add key="severr.contextAppVersion" value="1.0" />
+      <add key="severr.contextEnvName" value="development"/>
+    </appSettings>
+</configuration>
 ```
 
 And to send an exception to Severr, it's as simple as...
@@ -45,9 +45,9 @@ using System.Threading.Tasks;
 
 namespace SeverrSampleApp
 {
-    /// &lt;summary>
+    /// <summary>
     /// Sample program to generate an event
-    /// &lt;/summary>
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
