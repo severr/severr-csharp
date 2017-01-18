@@ -1,4 +1,4 @@
-# IO.Severr.Model.CustomDoubleData
+# IO.Trakerr.Model.CustomDoubleData
 ## Properties
 
 Name | Type | Description | Notes

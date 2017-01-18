@@ -1,4 +1,4 @@
-# IO.Severr.Model.InnerStackTrace
+# IO.Trakerr.Model.InnerStackTrace
 ## Properties
 
 Name | Type | Description | Notes

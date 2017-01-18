@@ -1,4 +1,4 @@
-# IO.Severr.Model.AppEvent
+# IO.Trakerr.Model.AppEvent
 ## Properties
 
 Name | Type | Description | Notes

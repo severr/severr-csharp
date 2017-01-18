@@ -16,6 +16,6 @@
 language: csharp
 mono:
   - latest
-solution: IO.Severr.sln
+solution: IO.Trakerr.sln
 script:
   - /bin/sh ./mono_nunit_test.sh

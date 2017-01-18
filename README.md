@@ -1,6 +1,6 @@
-# IO.Severr - the C# library for the Severr API
+# IO.Trakerr - the C# library for the Trakerr API
 
-Get your application events and errors to Severr via the *Severr API*.
+Get your application events and errors to Trakerr via the *Trakerr API*.
 
 - API version: 1.0.0
 - SDK version: 1.0.0
@@ -10,40 +10,40 @@ Get your application events and errors to Severr via the *Severr API*.
 - Windows Phone 7.1 (Mango)
 
 ## Dependencies
-- [IO.SeverrClient](http://www.nuget.org/packages/IO.SeverrClient/) - 1.0.0 or later
+- [IO.TrakerrClient](http://www.nuget.org/packages/IO.TrakerrClient/) - 1.0.0 or later
 
 The DLLs included in the package may not be the latest version. We recommend using [NuGet] (https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
 ```
-Install-Package IO.SeverrClient
+Install-Package IO.TrakerrClient
 ```
 
 ## Getting Started
 
-First setup a sample application and setup App.config to include your API key (see SeverrSampleApp project for an example).
+First setup a sample application and setup App.config to include your API key (see TrakerrSampleApp project for an example).
 
 ```xml
 <configuration>
 ...
     <appSettings>
-      <add key="severr.apiKey" value="a7a2807a2e8fd4602f70e9e8f819790a267213934083" />
-      <add key="severr.url" value="https://severr.io/api/v1/" />
-      <add key="severr.contextAppVersion" value="1.0" />
-      <add key="severr.contextEnvName" value="development"/>
+      <add key="trakerr.apiKey" value="a7a2807a2e8fd4602f70e9e8f819790a267213934083" />
+      <add key="trakerr.url" value="https://trakerr.io/api/v1/" />
+      <add key="trakerr.contextAppVersion" value="1.0" />
+      <add key="trakerr.contextEnvName" value="development"/>
     </appSettings>
 </configuration>
 ```
 
-And to send an exception to Severr, it's as simple as...
+And to send an exception to Trakerr, it's as simple as...
 
 ```csharp
-using IO.SeverrClient;
+using IO.TrakerrClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeverrSampleApp
+namespace TrakerrSampleApp
 {
     /// <summary>
     /// Sample program to generate an event
@@ -58,8 +58,8 @@ namespace SeverrSampleApp
             }
             catch (Exception e)
             {
-                // Send the event to Severr
-                e.SendToSeverr();
+                // Send the event to Trakerr
+                e.SendToTrakerr();
             }
         }
     }
@@ -69,5 +69,5 @@ namespace SeverrSampleApp
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
- - [Model.AppEvent](https://github.com/severr/severr-csharp/blob/master/generated/docs/AppEvent.md)
+ - [Model.AppEvent](https://github.com/trakerr/trakerr-csharp/blob/master/generated/docs/AppEvent.md)
 

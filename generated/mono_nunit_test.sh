@@ -18,16 +18,16 @@ wget -nc https://nuget.org/nuget.exe
 mozroots --import --sync
 
 echo "[INFO] remove bin/Debug/SwaggerClientTest.dll"
-rm src/IO.Swagger.Test/bin/Debug/IO.Severr.Test.dll 2> /dev/null
+rm src/IO.Swagger.Test/bin/Debug/IO.Trakerr.Test.dll 2> /dev/null
 
 echo "[INFO] install NUnit runners via NuGet"
 wget -nc https://nuget.org/nuget.exe
 mozroots --import --sync
-mono nuget.exe install src/IO.Severr.Test/packages.config -o packages
+mono nuget.exe install src/IO.Trakerr.Test/packages.config -o packages
 
 echo "[INFO] Install NUnit runners via NuGet"
 mono nuget.exe install NUnit.Runners -Version 2.6.4 -OutputDirectory packages 
 
 echo "[INFO] Build the solution and run the unit test"
-xbuild IO.Severr.sln && \
-    mono ./packages/NUnit.Runners.2.6.4/tools/nunit-console.exe src/IO.Severr.Test/bin/Debug/IO.Severr.Test.dll
+xbuild IO.Trakerr.sln && \
+    mono ./packages/NUnit.Runners.2.6.4/tools/nunit-console.exe src/IO.Trakerr.Test/bin/Debug/IO.Trakerr.Test.dll

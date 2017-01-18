@@ -1,4 +1,4 @@
-# IO.Severr.Model.StackTraceLines
+# IO.Trakerr.Model.StackTraceLines
 ## Properties
 
 Name | Type | Description | Notes

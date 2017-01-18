@@ -1,4 +1,4 @@
-# IO.Severr.Model.Error
+# IO.Trakerr.Model.Error
 ## Properties
 
 Name | Type | Description | Notes
