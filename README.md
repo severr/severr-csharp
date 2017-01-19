@@ -25,7 +25,7 @@ First setup a sample application and setup App.config to include your API key (s
 <configuration>
 ...
     <appSettings>
-      <add key="trakerr.apiKey" value="a7a2807a2e8fd4602f70e9e8f819790a267213934083" />
+      <add key="trakerr.apiKey" value="<your api key here>" />
       <add key="trakerr.url" value="https://trakerr.io/api/v1/" />
       <add key="trakerr.contextAppVersion" value="1.0" />
       <add key="trakerr.contextEnvName" value="development"/>
@@ -33,7 +33,9 @@ First setup a sample application and setup App.config to include your API key (s
 </configuration>
 ```
 
-And to send an exception to Trakerr, it's as simple as...
+### Option-1: Send an exception to Trakerr
+
+To send an exception to Trakerr, it's as simple as calling .SendToTrakerr() on the exception (see example below).
 
 ```csharp
 using IO.TrakerrClient;
@@ -65,6 +67,35 @@ namespace TrakerrSampleApp
     }
 }
 ```
+
+### Option-2: Send any event (including non-exceptions) programmatically
+```csharp
+using IO.TrakerrClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TrakerrSampleApp
+{
+    /// <summary>
+    /// Sample program to generate an event
+    /// </summary>
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var client = new TrakerrClient();
+
+            var event = client.GetNewAppEvent("Info", "System.Exception", "Some message");
+
+            client.SendEventAsync(event);
+        }
+    }
+}
+```
+
 
 <a name="documentation-for-models"></a>
 ## Documentation for Models
